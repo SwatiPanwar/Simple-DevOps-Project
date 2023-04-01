@@ -40,3 +40,22 @@ So far we have completed the installation of maven software to support maven plu
 2. Configure maven path
   - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
 
+for java on linux set-up JAVA_HOEM
+#whereis java
+#ls -l /usr/bin/java
+Three Step Process: First: open Terminal->$ whereis java it would give output like this: java: /usr/bin/java /usr/share/java /usr/share/man/man1/java.1.gz
+
+Second: ls -l /usr/bin/java It would give output like this: lrwxrwxrwx 1 root root 22 Feb  9 10:59 /usr/bin/java -> /etc/alternatives/java
+
+Third: ls -l /etc/alternatives/java output is the JDK path: lrwxrwxrwx 1 root root 46 Feb  9 10:59 /etc/alternatives/java -> /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+export JAVA_HOME="path that you copied"
+
+  export PATH=$JAVA_HOME/bin:$PATH
+  For all users, you have to follow below steps
+
+sudo gedit .bashrc (for single user)
+
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
+
+export PATH=$PATH:$JAVA_HOME/bin
+
