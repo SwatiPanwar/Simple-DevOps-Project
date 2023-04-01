@@ -53,7 +53,7 @@ export JAVA_HOME="path that you copied"
   export PATH=$JAVA_HOME/bin:$PATH
   For all users, you have to follow below steps
 
-sudo gedit .bashrc (for single user)
+sudo gedit .bashrc (for single user) FOR ALL USERS (vi /etc/profile)
 
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/"
 
